@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Matricula.AppMovil.ViewModels"
+             x:DataType="vm:EstudiantesViewModel"
+             x:Class="Matricula.AppMovil.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Start">
+
+
+
+            <Button
+                
+                Text="Ver los Estudiantes"
+                Command="{Binding  VerEstudiantesRegistradosCommand}" Margin="10,10,10,0">
+
+            </Button>
+                <Button
+                
+                Text="Ver Mujeres registradas"
+                Command="{Binding  VerMujeresRegistradosCommand}"  Margin="10,10,10,0" >
+
+
+                </Button>
+                    <Button
+                
+                Text="Ver Hombres Resgistrados"
+                Command="{Binding  VerHombresRegistradosCommand}"  Margin="10,10,10,0">
+
+
+                    </Button>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mo="clr-namespace:Matricula.AppMovil.Models.Dtos"
+             x:Class="Matricula.AppMovil.Views.Templates.Estuidiante">
+
+    <Frame>
+        <StackLayout  x:DataType="mo:EstudianteModel" >
+            <HorizontalStackLayout>
+                <Label Text="Cedula:" FontSize="15" FontAttributes="Bold" TextColor="Blue" Margin="1,1,1,1"/>
+                <Label Text="{Binding Cedula}" FontSize="15" FontAttributes="Bold" TextColor="Blue"  />
+            </HorizontalStackLayout>
+            <VerticalStackLayout>
+                <HorizontalStackLayout>
+                    <Label Text="Nombre:" FontSize="Body" FontAttributes="Bold" TextColor="Black" Margin="1,1,1,1"/>
+                    <Label Text="{Binding NombreCompleto}" FontSize="Body" FontAttributes="Bold" TextColor="Black"  />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label Text="Sexo: " FontSize="Body" FontAttributes="Bold" TextColor="Black"  />
+                    <Label Text="{Binding Sexo}"  FontSize="Body" FontAttributes="Bold" TextColor="Black"  />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label Text="Edad: " FontSize="Body" FontAttributes="Bold" TextColor="Black"  />
+                    <Label Text="{Binding Edad}"  FontSize="Body" FontAttributes="Bold" TextColor="Black"  />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                    <Label Text="Cedula del padre: " FontSize="Body" FontAttributes="Bold" TextColor="Black"  />
+                    <Label Text="{Binding CedulaPadre}"   FontSize="Body" FontAttributes="Bold" TextColor="Black" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label Text="Cedula De la Madre: " FontSize="Body" FontAttributes="Bold" TextColor="Black"  />
+                    <Label Text="{Binding CedulaMadre}"   FontSize="Body" FontAttributes="Bold" TextColor="Black" />
+                </HorizontalStackLayout>
+
+
+            </VerticalStackLayout>
+
+        </StackLayout>
+    </Frame>
+
+
+
+</ContentView>

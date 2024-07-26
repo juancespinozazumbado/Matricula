@@ -1,0 +1,293 @@
+﻿@model Matricula.UI.Models.Estudiantes.ModeloHistorial
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalles</h1>
+
+<div class="bg-light">
+    <h4>Estudiante</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Estudiante.Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Estudiante.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Estudiante.Cedula)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Estudiante.Cedula)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Estudiante.Nombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Estudiante.Nombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Estudiante.PrimerApellido)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Estudiante.PrimerApellido)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Estudiante.SegundoApellido)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Estudiante.SegundoApellido)
+        </dd>
+    </dl>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <p>Cedula</p>
+            </th>
+            <th>
+                <p>Nombre</p>
+            </th>
+            <th>
+                <p>Primer Apellido</p>
+            </th>
+            <th>
+                <p>Segundo Apellido</p>
+            </th>
+            
+            <th> <p>Parentesco</p></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Historial[0])
+        {
+            <tr>
+                
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cedula)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PrimerApellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SegundoApellido)
+                </td>
+                <td>
+                    @if (item.Sexo == Matricula.Model.Entidades.Sexo.Hombre)
+                    {
+                        <p>Hijo</p>
+                    }
+                    else
+                    {
+                        <p>Hija</p>
+                    }
+
+                </td>
+
+            </tr>
+        }
+        @foreach (var item in Model.Historial[1])
+        {
+            <tr>
+                
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cedula)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PrimerApellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SegundoApellido)
+                </td>
+                <td>
+                    @if (item.Sexo == Matricula.Model.Entidades.Sexo.Hombre)
+                    {
+                        <p>Padre</p>
+                    }
+                    else
+                    {
+                        <p>Madre</p>
+                    }
+
+                </td>
+
+            </tr>
+
+            }
+
+        @foreach (var item in Model.Historial[2])
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cedula)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PrimerApellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SegundoApellido)
+                </td>
+                <td>
+                    @if (item.Sexo == Matricula.Model.Entidades.Sexo.Hombre)
+                    {
+                        <p>Hermano</p>
+                    }
+                    else
+                    {
+                        <p>Hermana</p>
+                    }
+
+                </td>
+
+            </tr>
+            
+    }
+        @foreach (var item in Model.Historial[3])
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cedula)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PrimerApellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SegundoApellido)
+                </td>
+                  <td>
+                    @if (item.Sexo == Matricula.Model.Entidades.Sexo.Hombre)
+                    {
+                        <p>Abuelo</p>
+                    }
+                    else
+                    {
+                        <p>Abuela</p>
+                    }
+
+                </td>
+
+            </tr>
+
+        }
+
+        @foreach (var item in Model.Historial[4])
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cedula)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PrimerApellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SegundoApellido)
+                </td>
+                                <td>
+                    @if (item.Sexo == Matricula.Model.Entidades.Sexo.Hombre)
+                    {
+                        <p>Tío Paterno</p>
+                    }
+                    else
+                    {
+                        <p>Tía Paterna</p>
+                    }
+
+                </td>
+
+            </tr>
+
+        }
+
+        @foreach (var item in Model.Historial[5])
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cedula)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PrimerApellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SegundoApellido)
+                </td>
+                <td>
+                    @if (item.Sexo == Matricula.Model.Entidades.Sexo.Hombre)
+                    {
+                        <p>Tío Materno</p>
+                    }
+                    else
+                    {
+                        <p>Tía Materna</p>
+                    }
+
+                </td>
+
+            </tr>
+
+        }
+
+        @foreach (var item in Model.Historial[6])
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cedula)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PrimerApellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SegundoApellido)
+                </td>
+                                <td>
+                    @if (item.Sexo == Matricula.Model.Entidades.Sexo.Hombre)
+                    {
+                        <p>Primo</p>
+                    }
+                    else
+                    {
+                        <p>Prima</p>
+                    }
+
+                </td>
+
+            </tr>
+
+        }
+
+    </tbody>
+</table>
+
+
+<div>
+    <a asp-action="Index" class="btn btn-secondary">Volver a la lista</a>
+</div>
