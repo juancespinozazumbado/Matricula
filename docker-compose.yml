@@ -1,0 +1,13 @@
+services:
+  matricula.si:
+    image: ${DOCKER_REGISTRY-}matriculasi
+    build:
+      context: .
+      dockerfile: Matricula.SI/Dockerfile
+
+  matricula.ui:
+    image: ${DOCKER_REGISTRY-}matriculaui
+    build:
+      context: .
+      dockerfile: Matricula.UI/Dockerfile
+
